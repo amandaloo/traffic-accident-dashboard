@@ -5,14 +5,23 @@
 
 
 #import libraries
+import streamlit as st
 import pandas as pd
+from pathlib import Path
+
+# Get the directory containing your Python script
+BASE_DIR = Path(__file__).resolve().parent
+
+# Locate the CSV file
+CSV_PATH = BASE_DIR / "US_Accidents_subset.csv"
+
+# Load dataset
+accident = pd.read_csv(CSV_PATH)
 
 
 # In[ ]:
 
 
-#load data
-accident = pd.read_csv("US_Accidents_subset.csv")
 
 
 # In[ ]:
